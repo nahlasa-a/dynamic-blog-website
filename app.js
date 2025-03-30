@@ -22,7 +22,9 @@ function handlePostForm() {
             
             savePost(newPost);
             
-            window.location.href = 'index.html?t=' + Date.now();
+            setTimeout(() => {
+                window.location.href = 'index.html?t=' + Date.now();
+            }, 500); 
         });
     }
 }
@@ -139,8 +141,10 @@ function loadPosts() {
             <a href="post.html?id=${post.id}">Read More</a>
         `;
         postsContainer.appendChild(postElement);
+        localStorage.setItem('posts', JSON.stringify(posts));
+        window.dispatchEvent(new Event('storage')); // Force sync
     });
-    
+
     postsContainer.innerHTML = posts.map(post => `
         <div class="post-card">
             <h2>${post.title}</h2>
