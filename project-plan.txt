@@ -1,0 +1,19 @@
+Project: Dynamic Blog Website
+
+Pages:
+- index.html: Homepage listing all blog posts
+- new-post.html: Form to create new posts
+- post.html: View and edit individual posts
+
+Features:
+- CRUD operations using JavaScript
+- Local storage for data persistence
+- Responsive design
+
+Implementation Steps:
+1. Set up repository structure
+2. Create homepage with post listing
+3. Implement new post creation
+4. Add post viewing/editing
+5. Implement delete functionality
+6. Final styling and testing
