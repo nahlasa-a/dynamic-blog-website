@@ -94,6 +94,20 @@ function handlePostPage() {
             localStorage.setItem('posts', JSON.stringify(posts));
             window.location.reload(); 
         }
+
+    document.getElementById('delete-btn').addEventListener('click', function() {
+        document.getElementById('delete-confirm').style.display = 'block';
+    });
+
+    document.getElementById('cancel-delete').addEventListener('click', function() {
+        document.getElementById('delete-confirm').style.display = 'none';
+    });
+
+    document.getElementById('confirm-delete').addEventListener('click', function() {
+        const updatedPosts = posts.filter(p => p.id !== postId);
+        localStorage.setItem('posts', JSON.stringify(updatedPosts));
+        window.location.href = 'index.html';
+    });
     });
 }
 
@@ -126,6 +140,17 @@ function loadPosts() {
         `;
         postsContainer.appendChild(postElement);
     });
+    
+    postsContainer.innerHTML = posts.map(post => `
+        <div class="post-card">
+            <h2>${post.title}</h2>
+            <p class="post-preview">${post.content.substring(0, 100)}${post.content.length > 100 ? '...' : ''}</p>
+            <div class="post-footer">
+                <span class="post-date">${new Date(post.createdAt).toLocaleDateString()}</span>
+                <a href="post.html?id=${post.id}" class="read-more">Read More</a>
+            </div>
+        </div>
+    `).join('');
 }
 
 document.addEventListener('DOMContentLoaded', loadPosts);
