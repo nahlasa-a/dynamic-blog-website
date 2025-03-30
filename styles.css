@@ -123,3 +123,35 @@ button[type="submit"]:hover {
 .button.secondary {
     background-color: #6c757d;
 }
+
+#delete-confirm {
+    background: #fff3f3;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ffcccc;
+}
+
+#delete-confirm p {
+    margin: 0 0 10px 0;
+    color: #dc3545;
+}
+
+.post-preview {
+    color: #555;
+    margin: 10px 0;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
