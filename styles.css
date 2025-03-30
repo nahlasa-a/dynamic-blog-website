@@ -82,3 +82,44 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #218838;
 }
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.button.edit {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.button.danger {
+    background-color: #dc3545;
+}
+
+.post-content {
+    white-space: pre-line;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.post-date {
+    color: #6c757d;
+    font-style: italic;
+}
+
+#edit-form {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.button.secondary {
+    background-color: #6c757d;
+}
